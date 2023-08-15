@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { isEmpty } from 'ramda';
 import { Button, Grid, Input, Typography } from '@mui/material';
@@ -10,7 +10,7 @@ interface FormRendererProps {
 }
 
 const mapFields = (field: FieldDefinition, index: number) => {
-  let resolvedField = null;
+  let resolvedField: ReactNode = null;
 
   switch (field.type) {
     case 'number':
