@@ -1,0 +1,73 @@
+{
+  "title": "My generated form",
+  "subtitle": "Lets see what it can do",
+  "fields": [
+    {
+      "type": "string",
+      "label": "Name",
+      "name": "name",
+      "placeholder": "Enter your name",
+      "required": true
+    },
+    {
+      "type": "number",
+      "label": "Age",
+      "name": "age",
+      "placeholder": "Enter your age",
+      "required": true
+    },
+    {
+      "type": "multi-line",
+      "label": "Description",
+      "name": "description",
+      "placeholder": "Enter description",
+      "required": false
+    },
+    {
+      "type": "enum",
+      "label": "Is this good?",
+      "name": "isGood",
+      "options": [
+        {
+          "label": "Absolutely",
+          "value": "absolutely"
+        },
+        {
+          "label": "Yes",
+          "value": "yes"
+        },
+        {
+          "label": "No",
+          "value": "no"
+        }
+      ]
+    },
+    {
+      "type": "date",
+      "label": "Date of birth",
+      "name": "dateOfBirth",
+      "placeholder": "Enter your name",
+      "required": true
+    },
+    {
+      "type": "boolean",
+      "label": "Have you read the terms and conditions?",
+      "name": "termsConditions",
+      "required": true
+    }
+  ],
+  "buttons": [
+    {
+      "label": "Submit",
+      "type": "submit"
+    },
+    {
+      "label": "Cancel",
+      "type": "button"
+    },
+    {
+      "label": "Apply",
+      "type": "button"
+    }
+  ]
+}

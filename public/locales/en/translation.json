@@ -1,0 +1,9 @@
+{
+  "headerTitle": "JSON Form Generator",
+  "config": "Config",
+  "result": "Result",
+  "footer": "Created in 2023 by Martin Macháček",
+  "disclaimer": "Type your structure below. Note that invalid JSON is not saved and will not be rendered in next tab",
+  "formResultTabTitle": "JSON defined form result is here:",
+  "noDefinitionToRender": "No form definition to render"
+}

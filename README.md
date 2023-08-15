@@ -1,46 +1,46 @@
-# Getting Started with Create React App
+# JSON Form Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project implements simple form generator tool that takes a JSON input and renders complete form.
 
-## Available Scripts
+## Other projects like this
 
-In the project directory, you can run:
+- [react-jsonschema-form](https://rjsf-team.github.io/react-jsonschema-form/docs/)
+- [jsonforms](https://www.npmjs.com/package/@jsonforms/core)
 
-### `yarn start`
+# Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Make sure you are using node version > `18`, and yarn `3.4.1`.
+If you still have yarn classic (v1.22), run command:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+yarn set version berry
+```
 
-### `yarn test`
+Then, run this commands:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+# Install dependencies
+yarn
 
-### `yarn build`
+# Run development server
+yarn dev
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Open [http://localhost:5173/](http://localhost:5173/) with your browser to see the result.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# General notes about the project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This project is an PoC implementing all basic requirements for JSON Form Generator and nothing more. Further development is possible, with some things to improve mentioned in next chapter below.
 
-### `yarn eject`
+# Other things to improve in current solution
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Extract each field to separate file, having own wrapper on top of MUI to not be dependent
+- Split FormGenerator to multiple components to ensure better reusability
+- Add validations to form structure, so we can have individual fields validated
+- Add virtualization so bigger JSON structures do not have notable lag in render (or try million.js)
+- Add configuration so we can pass functions to generated forms buttons
+- Improve styling - so far it uses native HTML elements and base from MUI. Ideally it should be consistent, so used everything from MUI
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Nice to have for collaboration:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Precommit hook running prettier on staged files on commit (husky, lint-staged, prettier)
